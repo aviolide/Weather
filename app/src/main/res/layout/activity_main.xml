@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -21,13 +22,14 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/icons8_globe_24"/>
-            <TextView
+                android:src="@drawable/ic_business_black_24dp"
+                />
+            <TextView style="@style/TextColor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/current_location"/>
         </LinearLayout>
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/today_date"/>
@@ -39,7 +41,7 @@
         android:layout_gravity="center_horizontal"
         android:padding="20dp">
 
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/degrees"
@@ -52,7 +54,7 @@
         android:orientation="vertical"
         android:layout_gravity="center">
 
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/weather_main"
@@ -63,12 +65,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/humidity"
             android:textSize="20dp"/>
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/humidity"
@@ -79,12 +81,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/wind"
             android:textSize="20dp"/>
-        <TextView
+        <TextView style="@style/TextColor"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wind"
@@ -94,27 +96,32 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:src="@drawable/icons8_globe_48"
         android:layout_height="match_parent"
-        android:gravity="bottom">
+        android:gravity="bottom|center">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="5"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="fill_horizontal"
             android:background="@color/backBot">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                >
-                <ImageButton
+                android:layout_weight="1">
+
+            <ImageButton
                     android:layout_width="wrap_content"
                     android:id="@+id/button_london"
-                    android:src="@drawable/icons8_globe_48"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_united_kingdom"
+                    android:background="@color/backBot"
+                    android:layout_gravity="center"
                     android:layout_weight="1"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -129,10 +136,12 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:id="@+id/button_paris"
-                    android:src="@drawable/icons8_globe_48"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_france"
+                    android:background="@color/backBot"
+                    android:layout_gravity="center"
                     android:layout_weight="1"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -146,15 +155,17 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:id="@+id/button_corrent"
-                    android:src="@drawable/icons8_globe_48"
+                    android:src="@drawable/ic_russia"
+                    android:background="@color/backBot"
+                    android:layout_gravity="center"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="@string/cur"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -168,10 +179,12 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:id="@+id/button_ny"
-                    android:src="@drawable/icons8_globe_48"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_united_states"
+                    android:background="@color/backBot"
+                    android:layout_gravity="center"
                     android:layout_weight="1"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -185,10 +198,12 @@
                 <ImageButton
                     android:layout_width="wrap_content"
                     android:id="@+id/button_tokyo"
-                    android:src="@drawable/icons8_globe_48"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/ic_japan"
+                    android:background="@color/backBot"
+                    android:layout_gravity="center"
                     android:layout_weight="1"/>
-                <TextView
+                <TextView style="@style/TextColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

@@ -1,11 +1,13 @@
 package com.example.desided.weather;
 
 import android.content.Context;
+import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -44,8 +46,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setViews();
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+            Window window = this.getWindow();
+            window.setStatusBarColor(this.getColor(R.color.back));
+        }
+        setViews();
         ActivityCompat.requestPermissions(this,new String[]{ACCESS_FINE_LOCATION}, 1);
 
         setOnClickListeners();

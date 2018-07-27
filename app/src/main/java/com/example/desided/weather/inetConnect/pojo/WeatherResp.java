@@ -2,10 +2,12 @@ package com.example.desided.weather.inetConnect.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class WeatherResp {
 
@@ -64,12 +66,12 @@ public class WeatherResp {
     }
 
     public String getTemp(){
-        return mMain.temp;
+        return String.valueOf(new BigDecimal(mMain.temp).intValue());
     }
 
     public String getDate(){
         Date date = new Date();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE MMM dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("EEEE MMM dd", Locale.ENGLISH);
         return simpleDateFormat.format(date);
     }
 }

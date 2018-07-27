@@ -10,6 +10,6 @@
     <string name="new_york">New York</string>
     <string name="tokyo">Tokyo</string>
     <string name="clouds">Clouds</string>
-    <string name="humidity">Humidity :</string>
-    <string name="wind">Wind: </string>
+    <string name="humidity">Humidity:</string>
+    <string name="wind">Wind:</string>
 </resources>
